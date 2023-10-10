@@ -40,7 +40,7 @@ const MovieDetails = () => {
     },
     {
       id: 2,
-      title: "Django",
+      title: "Django Unchained",
       imageUrl: Django,
       summary:
         "Deux ans avant la Guerre civile, un ancien esclave du nom de Django s'associe avec un chasseur de primes d'origine allemande qui l'a libéré: il accepte de traquer avec lui des criminels recherchés. En échange, il l'aidera à retrouver sa femme perdue depuis longtemps et esclave elle aussi.",
