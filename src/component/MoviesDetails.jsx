@@ -2,8 +2,8 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 const MovieDetails = () => {
-  const { id } = useParams();
-
+  const {id} = useParams();
+  console.log(useParams())
   if (id === undefined) {
     return (
       <div style={errorStyle}>

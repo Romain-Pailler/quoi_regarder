@@ -11,7 +11,6 @@ function App() {
         <Route path='/' element={<Movies/>}/>
         <Route path="/movie/:id" element={<MoviesDetails/>}/>
       </Routes>
-      <Movies/>
       <Footer/>
     </div>
   );

@@ -61,22 +61,14 @@ const MovieListStyle = {
         gap: '16px', // Marge entre les cartes
     };
 function Movies() {
-    const location = useLocation();
-    const isMovieDetailsPage = location.pathname.startsWith('/movie/');
 
   return (
-    <div>
-      {isMovieDetailsPage ? (
-        <MoviesDetails />
-      ) : ( 
     <div style={MovieListStyle}>
-      {MovieList.map((movie, index) => (
+    {MovieList.map((movie, index) => (
         <Link to={`/movie/${index}`} key={index}>
         <MovieCard key={index} title={movie.title} imageUrl={movie.imageUrl}/>
         </Link>
-      ))}
-    </div>
-      )}
+    ))}
     </div>
   );
 }
