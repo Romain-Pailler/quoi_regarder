@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography  component={Link} to="/" variant="h6"sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Quoi regarder ?
         </Typography>
         <Button component={Link} to="/" color="inherit">
