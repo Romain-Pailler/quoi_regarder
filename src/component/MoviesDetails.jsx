@@ -163,6 +163,15 @@ const MovieDetails = () => {
       <img style={imageStyle} src={movie.imageUrl} alt={movie.title} />
       <p style={textStyle}>Résumé : {movie.summary}</p>
       <p style={textStyle}>Réalisateur : {movie.director}</p>
+      <p style={textStyle}>Acteurs :
+        <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+          {movie.actors.map((actor, index) => (
+            <li key={index}>
+              {actor} a joué le rôle de {movie.roles[index]}
+            </li>
+          ))}
+        </ul>
+      </p>
       <p style={textStyle}>Note : {movie.rating}/5</p>
       <p style={textStyle}>Avis : {movie.reviews}</p>
       <Link to="/" style={linkStyle}>
