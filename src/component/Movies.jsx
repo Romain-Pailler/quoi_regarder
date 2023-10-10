@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Twelve_Angry_Men from '../assets/12_angry_men.png';
 import Barbie from '../assets/barbie.png';
 import Django from '../assets/django.png';
@@ -11,7 +11,6 @@ import Oppenheimer from '../assets/oppenheimer.png';
 import Silence_of_the_lamb from '../assets/silence_of_the_lamb.png';
 import Whiplash from '../assets/whiplash.png';
 import MovieCard from './MovieCard';
-import MoviesDetails from './MoviesDetails';
 const MovieList = [
   {
     title: '12 hommes en colère',

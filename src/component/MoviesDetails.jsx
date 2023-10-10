@@ -1,6 +1,15 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-
+import Twelve_Angry_Men from '../assets/12_angry_men.png';
+import Barbie from '../assets/barbie.png';
+import Django from '../assets/django.png';
+import Fight_Club from '../assets/fight_club.png';
+import Gladiator from '../assets/gladiator.png';
+import Inception from '../assets/inception.png';
+import Le_Prestige from '../assets/le_prestige.png';
+import Oppenheimer from '../assets/oppenheimer.png';
+import Silence_of_the_lamb from '../assets/silence_of_the_lamb.png';
+import Whiplash from '../assets/whiplash.png';
 const MovieDetails = () => {
   const { id } = useParams();
   console.log(useParams())
