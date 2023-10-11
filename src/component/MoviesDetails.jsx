@@ -33,7 +33,11 @@ const MovieDetails = () => {
       actors: ["Henry Fonda", "Martin Balsam"],
       roles: ["M. Davis, le juré no 8, un architecte", "le juré no 1, un entraîneur de football américain"],
       rating: 9.10,
-      reviews: ["Un film captivant qui explore la justice et la moralité."],
+      reviews: {
+        name: "Critique 1",
+        avis: "Un film captivant qui explore la justice et la moralité.",
+        note: 9.10,
+      },
     },
     {
       id: 1,
@@ -164,7 +168,7 @@ const MovieDetails = () => {
       <p style={textStyle}>Résumé : {movie.summary}</p>
       <p style={textStyle}>Réalisateur : {movie.director}</p>
       <p style={textStyle}>Acteurs :
-        <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+        <ul style={listStyleType}>
           {movie.actors.map((actor, index) => (
             <li key={index}>
               {actor} a joué le rôle de {movie.roles[index]}
@@ -172,7 +176,7 @@ const MovieDetails = () => {
           ))}
         </ul>
       </p>
-      <p style={textStyle}>Note : {movie.rating}/5</p>
+      <p style={textStyle}>Note : {movie.rating}/10</p>
       <p style={textStyle}>Avis : {movie.reviews}</p>
       <Link to="/" style={linkStyle}>
         Retour à la liste des films
@@ -212,5 +216,11 @@ const errorStyle = {
   padding: '20px',
   color: 'red',
 };
+
+const listStyleType = {
+  listStyleType: 'none',
+  padding: 0,
+  margin: 0
+}
 
 export default MovieDetails;

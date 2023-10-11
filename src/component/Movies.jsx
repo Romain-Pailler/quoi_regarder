@@ -52,22 +52,23 @@ const MovieList = [
     title: 'Whiplash',
     imageUrl: Whiplash,
   }
-  
+
 ];
 const MovieListStyle = {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)', // 3 colonnes par ligne
-        gap: '16px', // Marge entre les cartes
-    };
+  display: 'grid',
+  gridTemplateColumns: 'repeat(3, 1fr)', // 3 colonnes par ligne
+  gap: '16px', // Marge entre les cartes
+  textAlign: "center"
+};
 function Movies() {
 
   return (
     <div style={MovieListStyle}>
-    {MovieList.map((movie, index) => (
+      {MovieList.map((movie, index) => (
         <Link to={`/movie/${index}`} key={index}>
-        <MovieCard key={index} title={movie.title} imageUrl={movie.imageUrl}/>
+          <MovieCard key={index} title={movie.title} imageUrl={movie.imageUrl} />
         </Link>
-    ))}
+      ))}
     </div>
   );
 }
