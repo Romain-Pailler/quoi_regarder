@@ -416,7 +416,7 @@ const MovieDetails = () => {
     }
 
     const totalRating = reviews.reduce((acc, review) => acc + review.note, 0);
-    return (totalRating / reviews.length).toFixed(2);
+    return (totalRating / reviews.length).toFixed(1);
   }
 
   return (
