@@ -5,22 +5,27 @@ import React, { useState } from 'react';
 const questions = [
   {
     question: 'Question 1',
+    contenu:'test',
     difficulty: 'Facile',
   },
   {
     question: 'Question 2',
+    contenu:'',
     difficulty: 'Moyen',
   },
   {
     question: 'Question 3',
+    contenu:'',
     difficulty: 'Difficile',
   },
   {
     question: 'Question 4',
+    contenu:'',
     difficulty: 'Moyen',
   },
   {
     question: 'Question 5',
+    contenu:'',
     difficulty: 'Difficile',
   },
 ];
@@ -47,6 +52,9 @@ const QuizzPrestige = () => {
       </Typography>
       <Typography variant="h6" align="center" gutterBottom>
         Niveau de difficulté : {questions[activeQuestionIndex].difficulty}
+      </Typography>
+      <Typography variant="body1" align="center" gutterBottom>
+        {questions[activeQuestionIndex].contenu}
       </Typography>
       <Typography variant="body1" align="center">
         {questions[activeQuestionIndex].question}

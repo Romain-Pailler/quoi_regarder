@@ -5,22 +5,27 @@ import React, { useState } from 'react';
 const questions = [
   {
     question: 'Question 1',
+    contenu:'',
     difficulty: 'Facile',
   },
   {
     question: 'Question 2',
+    contenu:'',
     difficulty: 'Moyen',
   },
   {
     question: 'Question 3',
+    contenu:'',
     difficulty: 'Difficile',
   },
   {
     question: 'Question 4',
+    contenu:'',
     difficulty: 'Moyen',
   },
   {
     question: 'Question 5',
+    contenu:'',
     difficulty: 'Difficile',
   },
 ];
