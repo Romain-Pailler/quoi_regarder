@@ -3,15 +3,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import React from 'react';
-
-const cardStyle = {
-    maxWidth: '400px', 
-  };
+import '../style/MovieCard.css';
 function MovieCard(props) {
   const { title, imageUrl } = props;
 
   return (
-    <Card sx={cardStyle}>
+    <Card className="cardStyle">
       <CardMedia
         component="img"
         height="auto"
