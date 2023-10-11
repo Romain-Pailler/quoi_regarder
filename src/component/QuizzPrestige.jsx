@@ -1,31 +1,31 @@
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 const questions = [
   {
-    question: 'Question 1',
-    contenu:'test',
+    
+    contenu:'Qui est le réalisateur du film ?',
     difficulty: 'Facile',
   },
   {
-    question: 'Question 2',
-    contenu:'',
+    
+    contenu:'Quel acteur jouant dans le prestige est présent dans le plus de films de son réalisateur ?',
     difficulty: 'Moyen',
   },
   {
-    question: 'Question 3',
-    contenu:'',
+    
+    contenu:"Quel objet Alfred Borden (Bale) utilise t'il lorsqu'il cherche à détourner l'attention ?",
     difficulty: 'Difficile',
   },
   {
-    question: 'Question 4',
-    contenu:'',
+    
+    contenu:"Pour quel tour de magie les 2 magiciens se battent t'ils ?",
     difficulty: 'Moyen',
   },
   {
-    question: 'Question 5',
-    contenu:'',
+    
+    contenu:'Quel grand scientifique fabrique une machine pour Robert ?',
     difficulty: 'Difficile',
   },
 ];
@@ -46,7 +46,7 @@ const QuizzPrestige = () => {
   };
 
   return (
-    <div>
+    <div style={{ height: '100vh', margin:'80px auto 30px auto'}}>
       <Typography variant="h4" align="center" gutterBottom>
         Question {activeQuestionIndex + 1}
       </Typography>
@@ -56,9 +56,6 @@ const QuizzPrestige = () => {
       <Typography variant="body1" align="center" gutterBottom>
         {questions[activeQuestionIndex].contenu}
       </Typography>
-      <Typography variant="body1" align="center">
-        {questions[activeQuestionIndex].question}
-      </Typography>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Button onClick={handlePreviousQuestion} variant="contained" color="primary">
           Précédent
@@ -66,6 +63,11 @@ const QuizzPrestige = () => {
         <Button onClick={handleNextQuestion} variant="contained" color="primary">
           Suivant
         </Button>
+      </div>
+      <div style={{ textAlign:'center'}}>
+      <Link to="/" className='linkStyle'>
+        Retour à la liste des films
+      </Link>
       </div>
     </div>
   );
