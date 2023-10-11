@@ -57,14 +57,14 @@ const QuizzPrestige = () => {
         {questions[activeQuestionIndex].contenu}
       </Typography>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Button onClick={handlePreviousQuestion} variant="contained" color="primary">
+        <Button onClick={handlePreviousQuestion} style={{ marginRight:'5px' }} variant="contained" color="primary">
           Précédent
         </Button>
         <Button onClick={handleNextQuestion} variant="contained" color="primary">
           Suivant
         </Button>
       </div>
-      <div style={{ textAlign:'center'}}>
+      <div style={{ textAlign:'center',marginTop:'10px'}}>
       <Link to="/" className='linkStyle'>
         Retour à la liste des films
       </Link>
