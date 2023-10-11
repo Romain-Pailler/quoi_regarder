@@ -437,7 +437,7 @@ const MovieDetails = () => {
       <p className='textStyle'>Note moyenne : {calculateAverageRating(movie.reviews)}/10</p>
       <p className='textStyle'>Avis :</p>
       {movie.reviews.map((review, index) => (
-        <Card key={index} style={{ margin: '10px' }}>
+        <Card key={index} style={{ margin: 'auto',marginBottom:'10px', width:'60%' }}>
           <CardContent>
             <Typography variant="h6" component="div">
               Auteur : {review.name}
