@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 const questions = [
   {
     
@@ -56,12 +56,17 @@ const QuizzGladiator = () => {
         {questions[activeQuestionIndex].contenu}
       </Typography>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Button onClick={handlePreviousQuestion} variant="contained" color="primary">
+        <Button onClick={handlePreviousQuestion} style={{ marginRight:'5px' }} variant="contained" color="primary">
           Précédent
         </Button>
         <Button onClick={handleNextQuestion} variant="contained" color="primary">
           Suivant
         </Button>
+      </div>
+      <div style={{ textAlign:'center',marginTop:'10px'}}>
+      <Link to="/" className='linkStyle'>
+        Retour à la liste des films
+      </Link>
       </div>
     </div>
   );
