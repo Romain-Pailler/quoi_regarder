@@ -1,20 +1,11 @@
 import React from 'react';
-
+import '../style/Footer.css';
 const Footer = () => {
   return (
-    <footer style={footerStyle}>
+    <footer className='footerStyle'>
       <p>Tous droits réservés</p>
     </footer>
   );
-};
-
-const footerStyle = {
-  backgroundColor: '#333',
-  color: '#fff',
-  textAlign: 'center',
-  paddingTop: '1rem',
-  paddingBottom:'1rem',
-  width: '100%',
 };
 
 export default Footer;

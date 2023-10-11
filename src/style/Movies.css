@@ -1,3 +1,8 @@
-.Movies img{
-    width: 100px;
+.MovieListStyle{
+    display: grid;
+    margin:20px;
+    margin-right: 10px;
+    grid-template-columns: repeat(3,minmax(250px,1fr));
+    list-style: none;
+    padding: 0;
 }

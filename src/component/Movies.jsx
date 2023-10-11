@@ -10,6 +10,7 @@ import Le_Prestige from '../assets/le_prestige.png';
 import Oppenheimer from '../assets/oppenheimer.png';
 import Silence_of_the_lamb from '../assets/silence_of_the_lamb.png';
 import Whiplash from '../assets/whiplash.png';
+import '../style/Movies.css';
 import MovieCard from './MovieCard';
 const MovieList = [
   {
@@ -54,19 +55,13 @@ const MovieList = [
   }
 
 ];
-const MovieListStyle = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(3, 1fr)', // 3 colonnes par ligne
-  gap: '16px', // Marge entre les cartes
-  textAlign: "center"
-};
 function Movies() {
 
   return (
-    <div style={MovieListStyle}>
+    <div className='MovieListStyle'>
       {MovieList.map((movie, index) => (
         <Link to={`/movie/${index}`} key={index}>
-          <MovieCard key={index} title={movie.title} imageUrl={movie.imageUrl} />
+          <MovieCard key={index} title={movie.title} imageUrl={movie.imageUrl}/>
         </Link>
       ))}
     </div>

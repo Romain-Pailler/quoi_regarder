@@ -10,12 +10,12 @@ import Le_Prestige from '../assets/le_prestige.png';
 import Oppenheimer from '../assets/oppenheimer.png';
 import Silence_of_the_lamb from '../assets/silence_of_the_lamb.png';
 import Whiplash from '../assets/whiplash.png';
+import '../style/MoviesDetails.css';
 const MovieDetails = () => {
   const { id } = useParams();
-  console.log(useParams())
   if (id === undefined) {
     return (
-      <div style={errorStyle}>
+      <div className='errorStyle'>
         <p>Paramètre d'URL manquant</p>
         <Link to="/">Retour à la liste des films</Link>
       </div>
@@ -400,7 +400,7 @@ const MovieDetails = () => {
 
   if (!movie) {
     return (
-      <div style={errorStyle}>
+      <div className='errorStyle'>
         <p>Le film que vous recherchez n'a pas été trouvé.</p>
         <Link to="/">Retour à la liste des films</Link>
       </div>
@@ -418,13 +418,13 @@ const MovieDetails = () => {
   }
 
   return (
-    <div style={containerStyle}>
-      <h2 style={titleStyle}>{movie.title}</h2>
-      <img style={imageStyle} src={movie.imageUrl} alt={movie.title} />
-      <p style={textStyle}>Résumé : {movie.summary}</p>
-      <p style={textStyle}>Réalisateur : {movie.director}</p>
-      <p style={textStyle}>Acteurs :
-        <ul style={listStyleType}>
+    <div className='containerStyle'>
+      <h2 className='titleStyle'>{movie.title}</h2>
+      <img className='imageStyle' src={movie.imageUrl} alt={movie.title} />
+      <p className='textStyle'>Résumé : {movie.summary}</p>
+      <p className='textStyle'>Réalisateur : {movie.director}</p>
+      <p className='textStyle'>Acteurs :
+        <ul className='listStyleType'>
           {movie.actors.map((actor, index) => (
             <li key={index}>
               {actor} a joué le rôle de {movie.roles[index]}  
@@ -432,9 +432,9 @@ const MovieDetails = () => {
           ))}
         </ul>
       </p>
-      <p style={textStyle}>Note : {calculateAverageRating(movie.reviews)}/10</p>
-      <p style={textStyle}>Avis :
-        <ul style={listStyleType}>
+      <p className='textStyle'>Note : {calculateAverageRating(movie.reviews)}/10</p>
+      <p className='textStyle'>Avis :
+        <ul className='listStyleType'>
           {movie.reviews.map((review, index) => (
             <li key={index}>
               <strong>{review.name}</strong> a donné une note de {review.note}/10 - "{review.avis}"
@@ -442,49 +442,12 @@ const MovieDetails = () => {
           ))}
         </ul>
       </p>
-      <Link to="/" style={linkStyle}>
+      <p className='textStyle'>Note : {movie.rating}/10</p>
+      <p className='textStyle'>Avis : {movie.reviews}</p>
+      <Link to="/" className='linkStyle'>
         Retour à la liste des films
       </Link>
     </div>
   );
 };
-
-const containerStyle = {
-  textAlign: 'center',
-  padding: '20px',
-};
-
-const titleStyle = {
-  fontSize: '24px',
-  fontWeight: 'bold',
-};
-
-const imageStyle = {
-  maxWidth: '100%',
-  maxHeight: '400px',
-  margin: '20px 0',
-};
-
-const textStyle = {
-  fontSize: '18px',
-  margin: '10px 0',
-};
-
-const linkStyle = {
-  textDecoration: 'none',
-  color: '#007bff',
-};
-
-const errorStyle = {
-  textAlign: 'center',
-  padding: '20px',
-  color: 'red',
-};
-
-const listStyleType = {
-  listStyleType: 'none',
-  padding: 0,
-  margin: 0
-}
-
 export default MovieDetails;
