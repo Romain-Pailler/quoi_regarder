@@ -11,7 +11,7 @@ function MovieCard(props) {
     <Card className="cardStyle">
       <CardMedia
         component="img"
-        height="auto"
+        height="600px"
         image={imageUrl}
         alt={title}
       />

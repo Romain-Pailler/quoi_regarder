@@ -13,7 +13,6 @@ import Whiplash from '../assets/whiplash.png';
 import '../style/MoviesDetails.css';
 const MovieDetails = () => {
   const { id } = useParams();
-  console.log(useParams())
   if (id === undefined) {
     return (
       <div className='errorStyle'>
