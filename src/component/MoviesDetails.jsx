@@ -1,4 +1,7 @@
-import React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { default as React } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Twelve_Angry_Men from '../assets/12_angry_men.png';
 import Barbie from '../assets/barbie.png';
@@ -395,7 +398,6 @@ const MovieDetails = () => {
     },
   ];
 
-  // Recherchez le film correspondant à l'ID
   const movie = movieList.find((movie) => movie.id === parseInt(id, 10));
 
   if (!movie) {
@@ -432,22 +434,28 @@ const MovieDetails = () => {
           ))}
         </ul>
       </p>
-      <p className='textStyle'>Note : {calculateAverageRating(movie.reviews)}/10</p>
-      <p className='textStyle'>Avis :
-        <ul className='listStyleType'>
-          {movie.reviews.map((review, index) => (
-            <li key={index}>
-              <strong>{review.name}</strong> a donné une note de {review.note}/10 - "{review.avis}"
-            </li>
-          ))}
-        </ul>
-      </p>
-      <p className='textStyle'>Note : {movie.rating}/10</p>
-      <p className='textStyle'>Avis : {movie.reviews}</p>
+      <p className='textStyle'>Note moyenne : {calculateAverageRating(movie.reviews)}/10</p>
+      <p className='textStyle'>Avis :</p>
+      {movie.reviews.map((review, index) => (
+        <Card key={index} style={{ margin: '10px' }}>
+          <CardContent>
+            <Typography variant="h6" component="div">
+              Auteur : {review.name}
+            </Typography>
+            <Typography variant="subtitle1" component="div">
+              Note : {review.note}/10
+            </Typography>
+            <Typography variant="body2" component="div">
+              Commentaire : {review.avis}
+            </Typography>
+          </CardContent>
+        </Card>
+      ))}
       <Link to="/" className='linkStyle'>
         Retour à la liste des films
       </Link>
     </div>
   );
 };
+
 export default MovieDetails;
