@@ -4,6 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 import '../style/MovieCard.css';
+
 function MovieCard(props) {
   const { title, imageUrl } = props;
 
@@ -11,7 +12,7 @@ function MovieCard(props) {
     <Card className="cardStyle">
       <CardMedia
         component="img"
-        height="600px"
+        className="cardImage"
         image={imageUrl}
         alt={title}
       />
