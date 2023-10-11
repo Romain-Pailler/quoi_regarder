@@ -60,8 +60,8 @@ function Movies() {
   return (
     <div className='MovieListStyle'>
       {MovieList.map((movie, index) => (
-        <Link to={`/movie/${index}`} key={index}>
-          <MovieCard key={index} title={movie.title} imageUrl={movie.imageUrl}/>
+        <Link to={`/movie/${index}`} key={index} className="movieLink">
+          <MovieCard key={index} title={movie.title} imageUrl={movie.imageUrl} />
         </Link>
       ))}
     </div>
