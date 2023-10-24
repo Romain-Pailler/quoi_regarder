@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-const reponses = [
+const questions = [
   {
     contenu: 'Quel est le réalisateur du film ?',
     reponse: 'Ridley Scott',
