@@ -93,9 +93,9 @@ function QuizzGladiator() {
       {isAnswerCorrect !== null && (
         <div style={{ textAlign: 'center', marginTop: '10px' }}>
           {isAnswerCorrect ? (
-            <div>Bonne réponse</div>
+            <div style={{color:"green"}}>Bonne réponse !</div>
           ) : (
-            <div>Mauvaise réponse</div>
+            <div style={{color:"red"}}>Mauvaise réponse !</div>
           )}
         </div>
       )}
